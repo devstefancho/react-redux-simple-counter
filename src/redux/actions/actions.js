@@ -1,12 +1,12 @@
-import { COUNT_UP, COUNT_DOWN } from "./actions/actionTypes";
+import { COUNT_UP, COUNT_DOWN } from "./actionTypes";
 
-const countUp = (payload) => ({
+const countUp = (payload = 1) => ({
   type: COUNT_UP,
   payload: {
     number: payload
   }
 });
-const countDown = (payload) => ({
+const countDown = (payload = 1) => ({
   type: COUNT_DOWN,
   payload: {
     number: payload
