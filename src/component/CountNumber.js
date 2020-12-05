@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { countUp, countDown } from "../redux/actions/actions";
+import { countUpAsync } from "../redux/actions/fetch";
 
 class CountNumber extends React.Component {
   constructor(props) {
@@ -42,7 +43,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    countUp: (payload) => () => dispatch(countUp(payload)),
+    countUp: (payload) => () => dispatch(countUpAsync(payload)),
     countDown: (payload) => () => dispatch(countDown(payload))
   };
 };

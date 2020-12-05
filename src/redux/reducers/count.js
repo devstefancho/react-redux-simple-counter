@@ -1,4 +1,4 @@
-import { COUNT_UP, COUNT_DOWN } from "../actions/actionTypes";
+import { COUNT_UP, COUNT_DOWN, FETCH_START } from "../actions/actionTypes";
 
 const init = {
   count: 0
@@ -13,6 +13,9 @@ export default function (state = init, action) {
     case COUNT_DOWN: {
       const { number } = action.payload;
       return { count: state.count - number };
+    }
+    case FETCH_START: {
+      return state;
     }
     default: {
       return state;

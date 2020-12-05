@@ -1,4 +1,4 @@
-import { COUNT_UP, COUNT_DOWN } from "./actionTypes";
+import { COUNT_UP, COUNT_DOWN, FETCH_START } from "./actionTypes";
 
 const countUp = (payload = 1) => ({
   type: COUNT_UP,
@@ -12,5 +12,8 @@ const countDown = (payload = 1) => ({
     number: payload
   }
 });
+const fetchStart = () => ({
+  type: FETCH_START
+});
 
-export { countUp, countDown };
+export { countUp, countDown, fetchStart };
